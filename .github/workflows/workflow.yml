@@ -32,10 +32,6 @@ jobs:
       run: cd server && node server.js &
     - name: Start frontend
       run: npm start &
-    - name: install playwright
-      run: npx playwright install
-    - name: install playwright dependencies
-      run: npx playwright install-deps
     - name: Run integration tests
       run: npm test
   
