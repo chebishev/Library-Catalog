@@ -29,10 +29,10 @@ jobs:
     - name: Install dependencies
       run: npm install
     - name: Start backend
-      run: node /server/server.js &
+      run: cd server && node server.js
     - name: Start frontend
       run: npm start &
-    - name: Install Playwright
+    - name: install playwright
       run: npx playwright install
     - name: Run integration tests
       run: npm test
