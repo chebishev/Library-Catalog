@@ -32,6 +32,8 @@ jobs:
       run: node /server/server.js &
     - name: Start frontend
       run: npm start &
+    - name: Install Playwright
+      run: npx playwright install
     - name: Run integration tests
       run: npm test
   
