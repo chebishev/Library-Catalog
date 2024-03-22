@@ -41,6 +41,7 @@ jobs:
 
   deploy-backend:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
     needs: build-test
     steps:
       - name: Deploy to Render.com
@@ -51,6 +52,7 @@ jobs:
 
   deploy-frontend:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
     needs: deploy-backend
     steps:
       - name: Deploy to Render.com
